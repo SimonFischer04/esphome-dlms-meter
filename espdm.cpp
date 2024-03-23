@@ -400,7 +400,8 @@ namespace esphome
                     currentPosition += 2; // Skip break after data
 
                     if(plaintext[currentPosition] == 0x0F) // There is still additional data for this type, skip it
-                        currentPosition += 6; // Skip additional data and additional break; this will jump out of bounds on last frame
+                        //currentPosition += 6; // Skip additional data and additional break; this will jump out of bounds on last frame
+                        currentPosition += 4; // Skip additional data and additional break; this will jump out of bounds on last frame
                 }
                 while (currentPosition <= messageLength); // Loop until arrived at end
 
